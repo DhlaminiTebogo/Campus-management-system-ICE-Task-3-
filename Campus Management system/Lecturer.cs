@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Code contributed by Tebogo
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,8 +10,8 @@ namespace Campus_Management_system
         public string EmployeeId { get; set; }
         public string Department { get; set; }
 
-        public Lecturer(int id, string name, string email, string employeeId, string department)
-            : base(id, name, email)
+        public Lecturer(string name, string email, string employeeId, string department)
+            : base(0, name, email)
         {
             EmployeeId = employeeId;
             Department = department;
@@ -18,11 +19,10 @@ namespace Campus_Management_system
 
         public override void DisplayDetails()
         {
-            Console.WriteLine($"ID: {ID}");
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Email: {Email}");
             Console.WriteLine($"Employee ID: {EmployeeId}");
-            Console.WriteLine($" | Department: {Department}");
+            Console.WriteLine($"Department: {Department}");
         }
     }
 }
